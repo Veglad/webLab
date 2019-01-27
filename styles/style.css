@@ -1,0 +1,556 @@
+body {
+	height: 580px;
+	width: 777px;
+	margin: 62px auto 0 auto;
+}
+
+header {
+	height: 159px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+#header_img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 200;
+}
+
+#logo {
+	position: absolute;
+	top: 12px;
+	left: 50px;
+	z-index: 300;
+}
+
+#computer_photo {
+	position: absolute;
+	right: 22px;
+	top: 25px;
+	z-index: 0;
+}
+
+main {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+nav {
+	position: relative;
+	padding-top: 13px;
+	z-index: 300;
+}
+
+#nav_block {
+	position: absolute;
+	margin-top: -5px;
+    z-index: -1;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 52px;
+	width: 177px;
+	list-style-type: none;
+	margin-left: 4px;
+	border-left: 1px solid #474747;
+	border-right: 1px solid #474747;
+	z-index: 1;
+}
+
+nav ul li {
+	height: 23px;
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+	background-image: linear-gradient(#a1b0d3, #6979a0);
+}
+
+nav ul li:hover {
+	background-image: linear-gradient(#c2d1f8, #fff);
+}
+
+nav ul li a:hover{
+	color: #444;
+}
+
+nav ul li a span{
+	margin-right: 7px;
+}
+
+nav ul li a{
+	padding-left: 20px;
+	display: block;
+	color: #fff;
+	font-family: Arial;
+	font-weight: 100;
+	font-size: 11px;
+	text-decoration: none;
+	line-height: 23px;
+	letter-spacing: 1px;
+}
+
+#title_news_main {
+    position: relative;
+	margin-top: 113px;
+    float: right;
+    padding-right: 5px;
+	height: 38px;
+	width: 499px;
+	z-index: 100;
+}
+
+#title_news_main span:first-child  {
+	position: absolute;
+	font-family: Arial;
+	font-size: 14px;
+	letter-spacing: 3px;
+	font-weight: bold;
+	top: 19px;
+	left: 29px;
+	color: #fff;
+	z-index:101;
+}
+
+#title_news_main span:last-child {
+	position: absolute;
+	right: 46px;
+	top: 18px;
+	font-size: 10px;
+	font-family: Verdana;
+	letter-spacing: 1px;
+}
+
+#title_news_main div{
+	position: absolute;
+	bottom: 0px;
+	z-index: -1;
+	background-color: #fff;
+}
+
+#title_news_white_box_1 {
+	right: 10px;
+	width: 340px;
+	height: 37px;
+}
+
+#title_news_white_box_2 {
+	right: 340px;
+	width: 40px;
+	height: 25px;
+}
+
+#side_news {
+	width: 179px;
+	margin-left: 4px;
+}
+
+#news_header_side {
+	position: relative;
+	margin-left: 7px;
+	width: 148px;
+	height: 19px;
+}
+
+#news_header_side span {
+	position: absolute;
+	left: 71px;
+	top: 2px;
+	font-family: Verdana;
+	letter-spacing: 1px;
+	font-size: 11px;
+	color: #fff;
+}
+
+#items {
+	padding-bottom: 10px;
+}
+
+.item {
+	margin-top:15px;
+	text-align: center;
+	font-family: Verdana;
+	font-size: 10px;
+	letter-spacing: 1px;
+}
+
+.item a{
+	text-decoration: none;
+}
+
+.item img {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 6px;
+}
+
+#sidebar {
+    width: 184px;
+    float: left;
+}
+
+#content {
+    width: 533px;
+    height: 260px;
+    padding: 5px;
+    margin: 10px;
+    padding-right: 30px;
+    float: right;
+}
+
+#content p {
+	font-family: Verdana;
+	font-size: 9px;
+	color: #2b6caf;
+	letter-spacing: 1px;
+	margin: 12px 0px;
+	line-height: 1.42;
+}
+
+#frame_img {
+	position: absolute;
+	bottom: 0px;
+	left: 10px;
+	z-index: -1;
+}
+
+.clear {
+	clear: both;
+}
+
+.border_bottom {
+	border-bottom: 1px solid #fff;
+}
+
+.tab {
+	margin-left: 20px;
+}
+
+
+
+
+
+
+
+.error_message {
+	font-style: italic;
+	color: #e77;
+	font-weight: 400;
+	margin-left: 50px;
+	visibility: hidden;
+}
+
+#error_checkboxes {
+	margin: 0;
+}
+
+.red_border {
+	border: 2px solid #f00;
+}
+
+
+
+
+
+
+
+h4 {
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.checkbox_block {
+    display: inline;
+}
+
+#checkboxes {
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+    height: 25px;
+}
+
+input[type="text"]{
+    margin-bottom: 2px;
+}
+
+form {
+    padding-left: 15px;
+}
+
+
+
+
+
+
+#server_vars {
+    overflow: scroll;
+    height: 250px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #444;
+    padding: 5px;
+}
+
+tr {
+    border: 1px solid #444;
+    padding: 5px;
+}
+
+
+
+
+
+#form_result_message {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#main_form h4:first-child {
+    margin-top: 0px;
+}
+
+#msg_success {
+    display: block;
+    text-align: center;
+    font-family: Arial;
+    margin-top: 10px;
+    color: #44aa44;
+}
+
+.error_msg_form_php {
+    margin-top: 5px;
+    font-style: italic;
+	color: #e77;
+	font-weight: 400;
+    text-align: center;
+    display: block;
+}
+
+
+
+
+
+
+#file_manager_table{
+    border: 1px solid #48689e;
+}
+
+#file_manager_table table {
+    width: 540px;
+}
+
+#file_manager_table th {
+    padding: 5px;
+}
+
+#file_manager_table tr {
+    border: none;
+}
+
+#file_manager_table tbody {
+    width: 100%;
+    display: block;
+    overflow: auto;
+    max-height: 210px;
+}
+
+#file_manager_table thead{
+    display: block;
+    background-color: #48689e;
+    color: white;
+    font-weight: 700;
+    font-family: sans-serif;
+    text-align: left;
+}
+
+#file_manager_table tbody td:first-child, thead th:first-child{
+    width: 300px;
+}
+
+#file_manager_table tbody tr td:nth-child(2n),#file_manager_table thead tr th:nth-child(2n){
+    width: 100px;
+}
+
+#file_manager_table tbody td:last-child, thead th:last-child{
+    width: 75px;
+}
+
+#file_manager_table td div {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+#file_manager_table td div img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    padding: 0;
+}
+
+#file_manager_table tr td div:hover{
+    padding-left: 5px; 
+}
+
+#file_manager_table div a {
+    text-decoration: none;
+    color: black;
+}
+
+#row_file_download td{
+    border : none;
+}
+
+tr#row_file_download{
+    border: 1px solid #444;
+    background-color: #a8c8fe;
+}
+
+tr#row_file_download td {
+    padding: 0px;
+}
+
+#file_manager_table form input[type=file]{
+    display: none;
+}
+#file_manager_table form{
+    padding: 0;
+    margin: 0;
+}
+
+#file_manager_table tr td a {
+    text-decoration: none;
+}
+
+#btn_path {
+    width: 100%;
+    border: none;
+    margin:0;
+    padding: 3px;
+    font-weight: 700;
+    color: white;
+    background-color: #666;
+}
+#btn_path:hover {
+    background-color: #888;
+}
+
+
+#pop_up_msg {
+    position: absolute;
+    padding: 10px;
+    padding-bottom: 5px;
+    border: 1px solid #aaa;
+    height: 70px;
+    width: 300px;
+    
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    
+    margin: auto auto;
+    
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#pop_up_msg span{
+    display: block;
+}
+
+#pop_up_msg button{
+    display: block;
+    width: 60px;
+    margin: 20px auto;
+    
+}
+
+
+
+
+
+
+
+
+
+#goods_list {
+    height: 80%;
+    overflow-y: auto;
+    padding: 10px;
+    
+}
+
+.car_card {
+    margin-top: 10px;
+    padding: 10px;
+    height: 170px;
+    box-shadow:  0 0 10px rgba(0,0,0,0.5);
+}
+
+.thumbnail{
+    height: 125px;
+}
+
+.car_img_block{
+    clear: left;
+    float: left;
+    width: 220px;
+}
+
+.car_info{
+    width: calc(53% - 30px);
+    padding: 0 10px;
+    margin-left:10px;
+    float: left;
+    height: 150px;
+}
+
+.car_full_name{
+    font-family: sans-serif;
+    font-size: 24px;
+}
+
+.car_name{
+    font-weight: 700;
+}
+
+.car_model{
+    margin-left: 5px;   
+}
+
+.car_price{
+    background-color: #48689e;
+    text-align: center;
+    color: white;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px;
+    padding: 5px 0;
+}
+
+.car_info table tr, .car_info table td{
+    border: none;
+}
+
+.car_info table tr td:last-child{
+    padding-left: 10px;
+}
+
+

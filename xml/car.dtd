@@ -1,0 +1,9 @@
+<!ELEMENT cars (car)>
+<!ELEMENT car (name, model, prod_country, price, serial_number, prod_year, image)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT model (#PCDATA)>
+<!ELEMENT prod_country (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT serial_number (#PCDATA)>
+<!ELEMENT prod_year (#PCDATA)>
+<!ELEMENT image (#PCDATA)>
