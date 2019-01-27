@@ -20,6 +20,30 @@ $path_to_xml = 'xml/cars.xml';
                 var resultBlock = document.getElementById("pop_up_msg");
                 resultBlock.style.display = "none";
             }
+            
+            function showMoreButton(cardId){
+                document.getElementsByClassName("more_background")[parseInt(cardId)].style.display = "block";
+            }
+            
+            function hideMoreButton(cardId){
+                document.getElementsByClassName("more_background")[parseInt(cardId)].style.display = "none";
+            }
+            
+            function moreBtnClick(cardId){
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function(){
+                    if (this.readyState == 4 && this.status == 200){
+                        showFullCarDescription(this.responseXML);
+                    }
+                }
+                xhttp.open("GET", "xml/cars.xml", true);
+                xhttp.send();
+            }
+            
+            function showFullCarDescription(xml){
+               alert(xml);
+            }
+            
         </script>
 	</head>
 	<body>
@@ -44,9 +68,9 @@ $path_to_xml = 'xml/cars.xml';
                                     foreach ($cars AS $car) {
                                         $carArray = get_car_as_array_from_xml($car);
                                         print_car_card(
-                                            $carArray["name"], $carArray["model"], $carArray["price"],
-                                            $carArray["image"], $carArray["prod_country"], $carArray["prod_year"],
-                                            $carArray["serial_number"]
+                                            $carArray["id"], $carArray["name"], $carArray["model"],
+                                            $carArray["price"], $carArray["image"], $carArray["prod_country"], 
+                                            $carArray["prod_year"], $carArray["serial_number"]
                                         );
                                     }
                                 }
@@ -65,9 +89,12 @@ $path_to_xml = 'xml/cars.xml';
 </html>
 
 <?php
-function print_car_card($name, $model, $price, $thumbnail, $country, $year, $serial_number){
+function print_car_card($id, $name, $model, $price, $thumbnail, $country, $year, $serial_number){
     echo '
-        <div class="car_card">
+        <div id="'.$id.'" class="car_card" onmouseover="showMoreButton('.$id.');" onmouseleave="hideMoreButton('.$id.');">
+            <div class="more_background">
+                <button class="more_btn" onclick="moreBtnClick('.$id.');">More</button>
+            </div>
             <div class="car_img_block">
                 <img class="thumbnail" alt="car image" src="'.$thumbnail.'"/>
                 <div class="car_price">
@@ -96,6 +123,7 @@ function print_car_card($name, $model, $price, $thumbnail, $country, $year, $ser
         </div>
     ';
 }
+
 function get_car_as_array_from_xml($carNode){
     $array = false; 
 
