@@ -29,6 +29,21 @@ $path_to_xml = 'xml/cars.xml';
                 document.getElementsByClassName("more_background")[parseInt(cardId)].style.display = "none";
             }
             
+            function moreButtonClick(cardId){
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function(){
+                    if (this.readyState == 4 && this.status == 200){
+                        showFullCarDescription(this.responseXML);
+                    }
+                }
+                xhttp.open("GET", "xml/cars.xml", true);
+                xhttp.send();
+            }
+            
+            function showFullCarDescription(xml){
+               alert(xml);
+            }
+            
         </script>
 	</head>
 	<body>
@@ -78,7 +93,7 @@ function print_car_card($id, $name, $model, $price, $thumbnail, $country, $year,
     echo '
         <div id="'.$id.'" class="car_card" onmouseover="showMoreButton('.$id.');" onmouseleave="hideMoreButton('.$id.');">
             <div class="more_background">
-                <button class="more_btn" onclick="moreBtnClick('.$id.');">More</button>
+                <button class="more_btn" onclick="moreButtonClick('.$id.');">More</button>
             </div>
             <div class="car_img_block">
                 <img class="thumbnail" alt="car image" src="'.$thumbnail.'"/>
