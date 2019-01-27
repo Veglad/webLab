@@ -9,10 +9,13 @@
 	<!ELEMENT serial_number (#PCDATA)>
 	<!ELEMENT prod_year (#PCDATA)>
 	<!ELEMENT image (#PCDATA)>
-    <!ATTLIST car price CDATA #REQUIRED>
+    <!ATTLIST car
+        price CDATA #REQUIRED
+        id ID #REQUIRED
+    >
 ]>
 <cars>
-	<car price="55 000">
+	<car price="55 000" id="1">
 		<name><![CDATA[Tesla]]></name>
 		<model><![CDATA[Model 3]]></model>
 		<prod_country><![CDATA[USA]]></prod_country>
@@ -20,7 +23,7 @@
 		<prod_year>2017</prod_year>
 		<image><![CDATA[https://cdn.images.express.co.uk/img/dynamic/24/590x/Tesla-Model-3-1028468.jpg?r=1539006725919]]></image>
 	</car>
-	<car price="40 000">
+	<car price="40 000" id="2">
 		<name><![CDATA[Volkswagen]]></name>
 		<model><![CDATA[Passat GT]]></model>
 		<prod_country><![CDATA[Germany]]></prod_country>
@@ -28,7 +31,7 @@
 		<prod_year>2018</prod_year>
 		<image><![CDATA[https://cnet4.cbsistatic.com/img/eNO-w--o-PVL0oz9zl4SDOAAvs0=/936x527/2018/03/26/350b9a38-581d-48ff-a2d3-9a2b23885471/2018-volkswagen-passat-gt-1.jpg]]></image>
 	</car>
-	<car price="51 400">
+	<car price="51 400" id="3">
 		<name><![CDATA[Volvo]]></name>
 		<model><![CDATA[XC 90]]></model>
 		<prod_country><![CDATA[Sweden]]></prod_country>
@@ -36,7 +39,7 @@
 		<prod_year><![CDATA[2016]]></prod_year>
 		<image><![CDATA[https://st.motortrend.com/uploads/sites/10/2015/09/2016-Volvo-XC90-R-Design-front-side-view.jpg]]></image>
 	</car>
-	<car price="30 000">
+	<car price="30 000" id="4">
 		<name><![CDATA[Audi]]></name>
 		<model><![CDATA[A4]]></model>
 		<prod_country><![CDATA[Germany]]></prod_country>
@@ -44,7 +47,7 @@
 		<prod_year>2010</prod_year>
 		<image><![CDATA[http://az413908.vo.msecnd.net/99/photos/201510/1418/4030/81b8eb42-3b86-47f4-92c1-62c8d1c5adc3.jpg]]></image>
 	</car>
-	<car price="40 000">
+	<car price="40 000" id="5">
 		<name><![CDATA[BMW]]></name>
 		<model><![CDATA[i3]]></model>
 		<prod_country><![CDATA[Germany]]></prod_country>
@@ -52,7 +55,7 @@
 		<prod_year>2014</prod_year>
 		<image><![CDATA[https://car-images.bauersecure.com/upload/31494/images/1040x585/0000c092f777-515e-4e71-a.jpg]]></image>
 	</car>
-	<car price="20 000">
+	<car price="20 000" id="6">
 		<name><![CDATA[Mercedes-Benz]]></name>
 		<model><![CDATA[M-Class]]></model>
 		<prod_country><![CDATA[Germany]]></prod_country>
@@ -60,7 +63,7 @@
 		<prod_year>2008</prod_year>
 		<image><![CDATA[https://www.conceptcarz.com/images/Mercedes-Benz/2010-Mercedes-Benz-M-Class-Image-02-800.jpg]]></image>
 	</car>
-	<car price="15 500">
+	<car price="15 500" id="7">
 		<name><![CDATA[Honda]]></name>
 		<model><![CDATA[Acord]]></model>
 		<prod_country><![CDATA[Japan]]></prod_country>
@@ -68,7 +71,7 @@
 		<prod_year>2013</prod_year>
 		<image><![CDATA[https://st.motortrend.com/uploads/sites/10/2015/11/2013-honda-accord-ex-l-v6-at-sedan-angular-front.png]]></image>
 	</car>
-	<car price="20 000">
+	<car price="20 000" id="8">
 		<name><![CDATA[Chevrolet]]></name>
 		<model><![CDATA[Equinox]]></model>
 		<prod_country><![CDATA[USA]]></prod_country>
@@ -76,7 +79,7 @@
 		<prod_year>2014</prod_year>
 		<image><![CDATA[https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/788x525/quality/85/https://s.aolcdn.com/commerce/autodata/images/USC30CHS152A021001.jpg]]></image>
 	</car>
-	<car price="15 000">
+	<car price="15 000" id="9">
 		<name><![CDATA[Dodge]]></name>
 		<model><![CDATA[Grand Caravane]]></model>
 		<prod_country><![CDATA[USA]]></prod_country>
@@ -84,7 +87,7 @@
 		<prod_year>2011</prod_year>
 		<image><![CDATA[https://www.dickscott.com/assets/stock/colormatched_01/white/640/cc_2011dod003b_01_640/cc_2011dod003b_01_640_pw1.jpg]]></image>
 	</car>
-	<car price="22 000">
+	<car price="22 000" id="10">
 		<name><![CDATA[Mazda]]></name>
 		<model><![CDATA[Mazda3]]></model>
 		<prod_country><![CDATA[Japan]]></prod_country>
