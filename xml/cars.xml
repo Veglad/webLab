@@ -19,7 +19,7 @@
     >
 ]>
 <cars>
-	<car price="55 000" id="1">
+	<car price="55 000" id="0">
 		<name><![CDATA[Tesla]]></name>
 		<model><![CDATA[Model 3]]></model>
 		<prod_country><![CDATA[USA]]></prod_country>
@@ -37,7 +37,7 @@
             </parameter>
         </parameter_list>
 	</car>
-	<car price="40 000" id="2">
+	<car price="40 000" id="1">
 		<name><![CDATA[Volkswagen]]></name>
 		<model><![CDATA[Passat GT]]></model>
 		<prod_country><![CDATA[Germany]]></prod_country>
@@ -59,7 +59,7 @@
             </parameter>
         </parameter_list>
 	</car>
-	<car price="51 400" id="3">
+	<car price="51 400" id="2">
 		<name><![CDATA[Volvo]]></name>
 		<model><![CDATA[XC 90]]></model>
 		<prod_country><![CDATA[Sweden]]></prod_country>
@@ -73,7 +73,7 @@
             </parameter>
         </parameter_list>
 	</car>
-	<car price="30 000" id="4">
+	<car price="30 000" id="3">
 		<name><![CDATA[Audi]]></name>
 		<model><![CDATA[A4]]></model>
 		<prod_country><![CDATA[Germany]]></prod_country>
@@ -81,7 +81,7 @@
 		<prod_year>2010</prod_year>
 		<image><![CDATA[https://assets.gocar.be/picserver1/userdata/1/25733/VmlTxhgqF/kfz43643555_bild1.jpg]]></image>
 	</car>
-	<car price="40 000" id="5">
+	<car price="40 000" id="4">
 		<name><![CDATA[BMW]]></name>
 		<model><![CDATA[i3]]></model>
 		<prod_country><![CDATA[Germany]]></prod_country>
@@ -103,7 +103,7 @@
             </parameter>
         </parameter_list>
 	</car>
-	<car price="20 000" id="6">
+	<car price="20 000" id="5">
 		<name><![CDATA[Mercedes-Benz]]></name>
 		<model><![CDATA[ML 350]]></model>
 		<prod_country><![CDATA[Germany]]></prod_country>
@@ -121,7 +121,7 @@
             </parameter>
         </parameter_list>
 	</car>
-	<car price="15 500" id="7">
+	<car price="15 500" id="6">
 		<name><![CDATA[Honda]]></name>
 		<model><![CDATA[Acord]]></model>
 		<prod_country><![CDATA[Japan]]></prod_country>
@@ -143,7 +143,7 @@
             </parameter>
         </parameter_list>
 	</car>
-	<car price="20 000" id="8">
+	<car price="20 000" id="7">
 		<name><![CDATA[Chevrolet]]></name>
 		<model><![CDATA[Equinox]]></model>
 		<prod_country><![CDATA[USA]]></prod_country>
@@ -151,7 +151,7 @@
 		<prod_year>2014</prod_year>
 		<image><![CDATA[https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/788x525/quality/85/https://s.aolcdn.com/commerce/autodata/images/USC30CHS152A021001.jpg]]></image>
 	</car>
-	<car price="15 000" id="9">
+	<car price="15 000" id="8">
 		<name><![CDATA[Dodge]]></name>
 		<model><![CDATA[Grand Caravane]]></model>
 		<prod_country><![CDATA[USA]]></prod_country>
@@ -173,7 +173,7 @@
             </parameter>
         </parameter_list>
 	</car>
-	<car price="22 000" id="10">
+	<car price="22 000" id="9">
 		<name><![CDATA[Mazda]]></name>
 		<model><![CDATA[Mazda3]]></model>
 		<prod_country><![CDATA[Japan]]></prod_country>
