@@ -10,41 +10,6 @@ $path_to_xml = 'xml/cars.xml';
 		<title>Навигация по файлам</title>
         <script type="text/javascript" src="scripts/main_animation.js"></script>
         <script type="text/javascript" src="scripts/form.js"></script>
-        <script>
-            function btnLoadClick(){
-                var fileLoadInput = document.querySelector('input[type=file]');
-                fileLoadInput.click();
-            }
-            
-            function btnResOkClick(){
-                var resultBlock = document.getElementById("pop_up_msg");
-                resultBlock.style.display = "none";
-            }
-            
-            function showMoreButton(cardId){
-                document.getElementsByClassName("more_background")[parseInt(cardId)].style.display = "block";
-            }
-            
-            function hideMoreButton(cardId){
-                document.getElementsByClassName("more_background")[parseInt(cardId)].style.display = "none";
-            }
-            
-            function moreButtonClick(cardId){
-                var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function(){
-                    if (this.readyState == 4 && this.status == 200){
-                        showFullCarDescription(this.responseXML);
-                    }
-                }
-                xhttp.open("GET", "xml/cars.xml", true);
-                xhttp.send();
-            }
-            
-            function showFullCarDescription(xml){
-               alert(xml);
-            }
-            
-        </script>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -79,12 +44,56 @@ $path_to_xml = 'xml/cars.xml';
                                 }
                         ?>
                     </div>
+                    <!-- Car info block -->
+                    <?php include("includes/car_info.php");?>
                 </div>
                 <?php
                 include("includes/footer.inc.php");
 
                 ?>
         </div>
+        <script>
+            function btnLoadClick(){
+                var fileLoadInput = document.querySelector('input[type=file]');
+                fileLoadInput.click();
+            }
+            
+            function btnResOkClick(){
+                var resultBlock = document.getElementById("pop_up_msg");
+                resultBlock.style.display = "none";
+            }
+            
+            function showMoreButton(cardId){
+                document.getElementsByClassName("more_background")[parseInt(cardId)].style.display = "block";
+            }
+            
+            function hideMoreButton(cardId){
+                document.getElementsByClassName("more_background")[parseInt(cardId)].style.display = "none";
+            }
+            
+            function moreButtonClick(cardId){
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function(){
+                    if (this.readyState == 4 && this.status == 200){
+                        showFullCarDescription(this.responseXML);
+                    }
+                }
+                xhttp.open("GET", "xml/cars.xml", true);
+                xhttp.send();
+            }
+            
+            function showFullCarDescription(xml){
+                var carCard = document.getElementById("carInfoDiv");
+                carCard.style.display = "flex";
+                alert(xml);
+            }
+            
+            document.getElementById("okBtnCarInfo").onclick = function(){
+                var carCard = document.getElementById("carInfoDiv");
+                carCard.style.display = "none";
+                
+            }
+        </script>
 	</body>
 </html>
 

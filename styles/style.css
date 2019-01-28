@@ -194,6 +194,7 @@ nav ul li a{
 }
 
 #content {
+    position: relative;
     width: 533px;
     height: 260px;
     padding: 5px;
@@ -587,3 +588,62 @@ tr#row_file_download td {
 }
 
 
+
+
+#carInfoDiv {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    box-shadow:  0 0 10px rgba(0,0,0,0.5);
+}
+
+#okBtnCarInfo{ 
+    width: 70px;
+    height: 25px;
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+    background: #48689e;
+    color: #fff;
+}
+
+#okBtnCarInfo:focus {
+    outline: 0;
+}
+
+#carInfoScrollBlock {
+    height: 100%;
+    flex: 0 1 60%;
+    -webkit-flex: 0 1 60%;
+    -ms-flex: 0 1 60%;
+    -moz-flex: 0 1 60%;
+    overflow-y: scroll;
+    border-left: 1px solid #000;
+}
+
+#carInfoScrollBlock table tr, #carInfoScrollBlock table td{
+    border: none;
+}
+
+#carInfoScrollBlock table{
+    margin: 10px;
+}
+
+#carInfoLeftBlock {
+    flex: 0 1 40%;
+    -webkit-flex: 0 1 40%;
+    -ms-flex: 0 1 40%;
+    -moz-flex: 0 1 40%;
+    height: calc(100% - 20px);
+    padding: 10px;
+}
+
+#carThumbnailMoreInfo {
+    display: block;
+    height: 125px;
+}
