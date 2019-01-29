@@ -72,20 +72,37 @@ $path_to_xml = 'xml/cars.xml';
             }
             
             function moreButtonClick(cardId){
+                cardId = parseInt(cardId)
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function(){
                     if (this.readyState == 4 && this.status == 200){
-                        showFullCarDescription(this.responseXML);
+                        showFullCarDescription(this.responseXML, cardId);
                     }
                 }
                 xhttp.open("GET", "xml/cars.xml", true);
                 xhttp.send();
             }
             
-            function showFullCarDescription(xml){
+            function showFullCarDescription(xml, cardId){
+                //Show block
                 var carCard = document.getElementById("carInfoDiv");
                 carCard.style.display = "flex";
-                alert(xml);
+                
+                //Fill the table with xml data
+                var tableNewParams = "";
+                
+                var carParams = xml.getElementsByTagName("parameter_list")[cardId];
+                var params = carParams.getElementsByTagName("parameter");
+                for(var i = 0; i < params.length; i++) {
+                    tableNewParams += "<tr><td>" +
+                    params[i].getElementsByTagName("parameter_name")[0].textContent +
+                    "</td><td>" +
+                    params[i].getElementsByTagName("parameter_value")[0].textContent +
+                    "</td></tr>"
+                }
+                
+                var table = document.getElementById("attributeTable");
+                table.innerHTML = tableNewParams;
             }
             
             document.getElementById("okBtnCarInfo").onclick = function(){

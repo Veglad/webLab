@@ -607,7 +607,7 @@ tr#row_file_download td {
     height: 25px;
     position: absolute;
     bottom: 10px;
-    left: 25px;
+    left: 10px;
     background: #48689e;
     color: #fff;
 }
@@ -641,9 +641,20 @@ tr#row_file_download td {
     -moz-flex: 0 1 40%;
     height: calc(100% - 20px);
     padding: 10px;
+    text-align: center;
 }
 
 #carThumbnailMoreInfo {
     display: block;
-    height: 125px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+#carInfoLeftBlock span:last-of-type {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px;
+    background: #fff;
+    color: #48689e;
+    
 }
