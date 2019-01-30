@@ -58,11 +58,6 @@ $path_to_xml = 'xml/cars.xml';
                 fileLoadInput.click();
             }
             
-            function btnResOkClick(){
-                var resultBlock = document.getElementById("pop_up_msg");
-                resultBlock.style.display = "none";
-            }
-            
             function showMoreButton(cardId){
                 document.getElementsByClassName("more_background")[parseInt(cardId)].style.display = "block";
             }
@@ -89,23 +84,56 @@ $path_to_xml = 'xml/cars.xml';
                 carCard.style.display = "flex";
                 
                 //Fill the table with xml data
-                var tableNewParams = "";
+                var tableContent = generateTableContent(xml, cardId);
+                var table = document.getElementById("attributeTable");
+                table.innerHTML = tableContent;
                 
+                //Fill the card with primary data
+                fillCarCardWithPrimaryData(xml, cardId);
+            }
+            
+            function generateTableContent(xml, cardId) {
+                var tableContent = "";
                 var carParams = xml.getElementsByTagName("parameter_list")[cardId];
                 var params = carParams.getElementsByTagName("parameter");
+                
                 for(var i = 0; i < params.length; i++) {
-                    tableNewParams += "<tr><td>" +
+                    tableContent += "<tr><td>" +
                     params[i].getElementsByTagName("parameter_name")[0].textContent +
-                    "</td><td>" +
+                    ":</td><td>" +
                     params[i].getElementsByTagName("parameter_value")[0].textContent +
                     "</td></tr>"
                 }
                 
-                var table = document.getElementById("attributeTable");
-                table.innerHTML = tableNewParams;
+                return tableContent
             }
             
-            document.getElementById("okBtnCarInfo").onclick = function(){
+            function fillCarCardWithPrimaryData(xml, cardId) {
+                //Get data from xml
+                var car = xml.getElementsByTagName("car")[cardId];
+                var name = car.getElementsByTagName("name")[0].textContent;
+                var model = car.getElementsByTagName("model")[0].textContent;
+                var prodCountry = car.getElementsByTagName("prod_country")[0].textContent;
+                var prodYear = car.getElementsByTagName("prod_year")[0].textContent;
+                var serialNumber = car.getElementsByTagName("serial_number")[0].textContent;
+                var imageUrl = car.getElementsByTagName("image")[0].textContent;
+                var price = car.getAttribute("price");
+                
+                //Fill car card with data
+                var carInfoLeftBlock = document.getElementById("carInfoLeftBlock");
+                var carInfoScrollBlock = document.getElementById("carInfoScrollBlock");
+                
+                carInfoLeftBlock.getElementsByClassName("car_name")[0].innerHTML = name;
+                carInfoLeftBlock.getElementsByClassName("car_model")[0].innerHTML = model;
+                document.getElementById("carThumbnailMoreInfo").src = imageUrl;
+                document.getElementById("moreInfoPrice").innerHTML = price + " $";
+                
+                carInfoScrollBlock.getElementsByClassName("car_country")[0].innerHTML = prodCountry;
+                carInfoScrollBlock.getElementsByClassName("car_year")[0].innerHTML = prodYear;
+                carInfoScrollBlock.getElementsByClassName("car_serial_number")[0].innerHTML = serialNumber;
+            }
+            
+            document.getElementById("closeBtnCarInfo").onclick = function(){
                 var carCard = document.getElementById("carInfoDiv");
                 carCard.style.display = "none";
                 

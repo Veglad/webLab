@@ -595,24 +595,24 @@ tr#row_file_download td {
     position: absolute;
     top: 0;
     left: 0;
+    padding-top: 15px;
     background: #fff;
     z-index: 10;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 15px);
     box-shadow:  0 0 10px rgba(0,0,0,0.5);
 }
 
-#okBtnCarInfo{ 
-    width: 70px;
-    height: 25px;
+#closeBtnCarInfo{ 
     position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background: #48689e;
+    top: 5px;
+    right: 15px;
+    background: #ae4848;
     color: #fff;
+    border-radius: 5px;
 }
 
-#okBtnCarInfo:focus {
+#closeBtnCarInfo:focus {
     outline: 0;
 }
 
@@ -623,11 +623,16 @@ tr#row_file_download td {
     -ms-flex: 0 1 60%;
     -moz-flex: 0 1 60%;
     overflow-y: scroll;
-    border-left: 1px solid #000;
 }
+
+hr {margin-left: 10px;}
 
 #carInfoScrollBlock table tr, #carInfoScrollBlock table td{
     border: none;
+}
+
+#content tr td:first-child {
+    padding-right: 16px;
 }
 
 #carInfoScrollBlock table{
@@ -653,7 +658,6 @@ tr#row_file_download td {
 #carInfoLeftBlock span:last-of-type {
     font-weight: bold;
     font-size: 20px;
-    padding: 5px;
     background: #fff;
     color: #48689e;
     
