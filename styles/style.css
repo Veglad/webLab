@@ -194,6 +194,7 @@ nav ul li a{
 }
 
 #content {
+    position: relative;
     width: 533px;
     height: 260px;
     padding: 5px;
@@ -497,6 +498,7 @@ tr#row_file_download td {
 }
 
 .car_card {
+    position: relative;
     margin-top: 10px;
     padding: 10px;
     height: 170px;
@@ -553,4 +555,110 @@ tr#row_file_download td {
     padding-left: 10px;
 }
 
+.more_background {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);   
+}
 
+.more_btn {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 60px);
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    background: rgba(0,0,0,0);
+    border-radius: 10px;
+}
+
+.more_btn:hover {
+    background: #fff;
+    color: #333;
+}
+
+.more_btn:focus {
+    outline: 0;
+}
+
+
+
+
+#carInfoDiv {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 15px;
+    background: #fff;
+    z-index: 10;
+    width: 100%;
+    height: calc(100% - 15px);
+    box-shadow:  0 0 10px rgba(0,0,0,0.5);
+}
+
+#closeBtnCarInfo{ 
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    background: #ae4848;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#closeBtnCarInfo:focus {
+    outline: 0;
+}
+
+#carInfoScrollBlock {
+    height: 100%;
+    flex: 0 1 60%;
+    -webkit-flex: 0 1 60%;
+    -ms-flex: 0 1 60%;
+    -moz-flex: 0 1 60%;
+    overflow-y: scroll;
+}
+
+hr {margin-left: 10px;}
+
+#carInfoScrollBlock table tr, #carInfoScrollBlock table td{
+    border: none;
+}
+
+#content tr td:first-child {
+    padding-right: 16px;
+}
+
+#carInfoScrollBlock table{
+    margin: 10px;
+}
+
+#carInfoLeftBlock {
+    flex: 0 1 40%;
+    -webkit-flex: 0 1 40%;
+    -ms-flex: 0 1 40%;
+    -moz-flex: 0 1 40%;
+    height: calc(100% - 20px);
+    padding: 10px;
+    text-align: center;
+}
+
+#carThumbnailMoreInfo {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
+
+#carInfoLeftBlock span:last-of-type {
+    font-weight: bold;
+    font-size: 20px;
+    background: #fff;
+    color: #48689e;
+    
+}
