@@ -43,7 +43,7 @@
                         <div id="checkboxes">
                             <div class="checkbox_block">
                                 <input type="checkbox" name="free_time_preferences[]" id="book_reading" onclick="checkboxChanged(this)">
-                                <label for="book_reading">Чтение</label>
+                                <label for="book_reading">Чтение </label>
                             </div>
                             <div class="checkbox_block">
                                 <input type="checkbox" name="free_time_preferences[]" id="do_sports" onclick="checkboxChanged(this)">
@@ -61,10 +61,31 @@
                                 <input type="checkbox" name="free_time_preferences[]" id="programming" onclick="checkboxChanged(this)">
                                 <label for="programming">Программирование</label>
                             </div>
+                            <div class="checkbox_block">
+                                <input type="checkbox" name="free_time_preferences[]" id="cb_music" onclick="checkboxChanged(this)">
+                                <label for="cb_music">Музыка</label>
+                            </div>
+                            <div class="checkbox_block">
+                                <input type="checkbox" name="free_time_preferences[]" id="cb_hobby" onclick="checkboxChanged(this)">
+                                <label for="cb_hobby">Хобби</label>
+                            </div>
+                            <div class="checkbox_block">
+                                <input type="checkbox" name="free_time_preferences[]" id="cb_computer_games" onclick="checkboxChanged(this)">
+                                <label for="cb_computer_games">Компьютерные игры</label>
+                            </div>
+                            <div class="checkbox_block">
+                                <input type="checkbox" name="free_time_preferences[]" id="cb_shopping" onclick="checkboxChanged(this)">
+                                <label for="cb_shopping">Шопинг</label>
+                            </div>
+                            <div class="checkbox_block">
+                                <input type="checkbox" name="free_time_preferences[]" id="cb_museum" onclick="checkboxChanged(this)">
+                                <label for="cb_museum">Музеи</label>
+                            </div>
                         </div>
-
-                        <input type="submit" name="submit" value="Submit" >
-
+                        <input type="button" class="formButton" name="checkAllButton" value="CHECK ALL" >
+                        <input type="button" class="formButton" name="uncheckAllButton" value="UNCHECK ALL">
+                        <input type="button" class="formButton" name="InvertAll" value="INVERT" >
+                        <input type="submit" class="formButton" name="submit" value="SUBMIT" >
 			         </form>
 				</div>
                 <?php

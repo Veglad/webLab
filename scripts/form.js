@@ -1,7 +1,3 @@
-$(document).ready(function() {
-    alert("ready");
-})
-
 function onFormSubmit() {
     var form = document.forms["main_form"];
 	var name = form.elements["name"].value;
@@ -27,7 +23,7 @@ function onFormSubmit() {
 	}
 
 	var numberOfChecked = document.querySelectorAll('input[type="checkbox"]:checked').length
-	if(numberOfChecked >= 3){
+	if(numberOfChecked > 3){
 		document.getElementById("error_checkboxes").style.visibility = "visible";
 		result = false;
 	}
