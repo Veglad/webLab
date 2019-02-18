@@ -4,6 +4,7 @@
 		<meta charset="UTF-8"/>
 		<link type="text/css" rel="stylesheet" href="styles/style.css"/>
 		<title>Данные</title>
+        <script src="scripts/jquery-3.3.1.js"></script>
         <script type="text/javascript" src="scripts/main_animation.js"></script>
         <script type="text/javascript" src="scripts/form.js"></script>
 	</head>
