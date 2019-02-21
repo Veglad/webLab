@@ -19,20 +19,20 @@
             include("includes/content_title.inc.php");
             ?>	
 				<div id="content">
-				    <form onsubmit="return onFormSubmit();" name="main_form" id="main_form">
+				    <form name="main_form" id="main_form">
                         <h4>ФИО</h4>
                         <div class="text_block">
-                            <input type="text" name="name" id="name" onkeydown="keyPressed('name', 'error_name')">
+                            <input type="text" name="name" id="name">
                             <label for="name">Имя</label>
                             <span class="error_message" id="error_name">Введите имя!</span>
                         </div>
                         <div class="text_block">
-                            <input type="text" name="second_name" id="second_name" onkeydown="keyPressed('second_name','error_sec_name')">
+                            <input type="text" name="second_name" id="second_name">
                             <label for="second_name">Фамилия</label>
                             <span class="error_message" id="error_sec_name">Введите фамилию!</span>
                         </div>
                         <div class="text_block">
-                            <input type="text" name="patronimic" id="patronimic" onkeydown="keyPressed('patronimic', 'error_patronimic')">
+                            <input type="text" name="patronimic" id="patronimic">
                             <label for="patronimic">Отчество</label>
                             <span class="error_message" id="error_patronimic">Введите отчество!</span>
                         </div>
@@ -42,43 +42,43 @@
                         </h4>
                         <div id="checkboxes">
                             <div class="checkbox_block">
-                                <input type="checkbox" name="free_time_preferences[]" id="book_reading" onclick="checkboxChanged(this)">
+                                <input type="checkbox" name="free_time_preferences[]" id="book_reading">
                                 <label for="book_reading">Чтение </label>
                             </div>
                             <div class="checkbox_block">
-                                <input type="checkbox" name="free_time_preferences[]" id="do_sports" onclick="checkboxChanged(this)">
+                                <input type="checkbox" name="free_time_preferences[]" id="do_sports">
                                 <label for="do_sports">Спорт</label>
                             </div>
                             <div class="checkbox_block">
-                                <input type="checkbox" name="free_time_preferences[]" id="go_for_a_walk" onclick="checkboxChanged(this)">
+                                <input type="checkbox" name="free_time_preferences[]" id="go_for_a_walk">
                                 <label for="go_for_a_walk">Прогулка</label>
                             </div>
                             <div class="checkbox_block">
-                                <input type="checkbox" name="free_time_preferences[]" id="make_creativity" onclick="checkboxChanged(this)">
+                                <input type="checkbox" name="free_time_preferences[]" id="make_creativity">
                                 <label for="make_creativity">Творчество</label>
                             </div>
                             <div class="checkbox_block">
-                                <input type="checkbox" name="free_time_preferences[]" id="programming" onclick="checkboxChanged(this)">
+                                <input type="checkbox" name="free_time_preferences[]" id="programming">
                                 <label for="programming">Программирование</label>
-                            </div>
+                            </div><br>
                             <div class="checkbox_block">
-                                <input type="checkbox" name="free_time_preferences[]" id="cb_music" onclick="checkboxChanged(this)">
+                                <input type="checkbox" name="free_time_preferences[]" id="cb_music">
                                 <label for="cb_music">Музыка</label>
                             </div>
                             <div class="checkbox_block">
-                                <input type="checkbox" name="free_time_preferences[]" id="cb_hobby" onclick="checkboxChanged(this)">
+                                <input type="checkbox" name="free_time_preferences[]" id="cb_hobby">
                                 <label for="cb_hobby">Хобби</label>
                             </div>
                             <div class="checkbox_block">
-                                <input type="checkbox" name="free_time_preferences[]" id="cb_computer_games" onclick="checkboxChanged(this)">
+                                <input type="checkbox" name="free_time_preferences[]" id="cb_computer_games">
                                 <label for="cb_computer_games">Компьютерные игры</label>
                             </div>
                             <div class="checkbox_block">
-                                <input type="checkbox" name="free_time_preferences[]" id="cb_shopping" onclick="checkboxChanged(this)">
+                                <input type="checkbox" name="free_time_preferences[]" id="cb_shopping">
                                 <label for="cb_shopping">Шопинг</label>
                             </div>
                             <div class="checkbox_block">
-                                <input type="checkbox" name="free_time_preferences[]" id="cb_museum" onclick="checkboxChanged(this)">
+                                <input type="checkbox" name="free_time_preferences[]" id="cb_museum">
                                 <label for="cb_museum">Музеи</label>
                             </div>
                         </div>
