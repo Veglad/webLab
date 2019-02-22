@@ -51,4 +51,18 @@ $( document ).ready(function(){
         
 	   $("#" + errorMsgId).css({'visibility': 'hidden'});
     });
+    
+    $("input[name='uncheckAllButton").click(function() {
+       $(":checkbox").prop( "checked", false ); 
+    });
+    
+    $("input[name='checkAllButton']").click(function() {
+       $(":checkbox").prop( "checked", true ); 
+    });
+    
+    $("input[name='InvertAll']").click(function() {
+       $(":checkbox").each(function() {
+          $(this).prop("checked", !$(this).prop("checked"));
+       });
+    });
 });

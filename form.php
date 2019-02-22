@@ -83,7 +83,7 @@
                             </div>
                         </div>
                         <input type="button" class="formButton" name="checkAllButton" value="CHECK ALL" >
-                        <input type="button" class="formButton" name="uncheckAllButton" value="UNCHECK ALL">
+                        <input type="button" class="formButton" name="uncheckAllButton" id="uncheckAllButton" value="UNCHECK ALL">
                         <input type="button" class="formButton" name="InvertAll" value="INVERT" >
                         <input type="submit" class="formButton" name="submit" value="SUBMIT" >
 			         </form>
