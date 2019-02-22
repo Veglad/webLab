@@ -65,4 +65,32 @@ $( document ).ready(function(){
           $(this).prop("checked", !$(this).prop("checked"));
        });
     });
+    
+    $("input[name='calendarButton']").click(function() {
+        var value;
+        if($("#calendar").css("visibility") == "hidden") {
+            value = "visible";
+        } else {
+            value = "hidden"
+        }
+       $("#calendar").css({'visibility': value}); 
+    });
+    
+    $('#calendar').fullCalendar({
+        weekends: false,
+        height: 650,
+        aspectRatio: 1,
+        dayClick: function() {
+          alert('a day has been clicked!');
+        },
+        defaultView: 'agendaWeek'
+    });
+    
+    $("#calendar").css({
+        'position': 'absolute',
+        'left': '200px',
+        'margin-right': '50px',
+        'background-color': '#fff',
+        'z-index': '10000',
+        'visibility': 'hidden'});
 });

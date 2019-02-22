@@ -3,10 +3,15 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<link type="text/css" rel="stylesheet" href="styles/style.css"/>
+        <link rel='stylesheet' href='fullcalendar-3.10.0/fullcalendar.css' />
 		<title>Данные</title>
         <script src="scripts/jquery-3.3.1.js"></script>
         <script type="text/javascript" src="scripts/main_animation.js"></script>
         <script type="text/javascript" src="scripts/form.js"></script>
+        
+        <script src='fullcalendar-3.10.0/lib/jquery.min.js'></script>
+        <script src='fullcalendar-3.10.0/lib/moment.min.js'></script>
+        <script src='fullcalendar-3.10.0/fullcalendar.js'></script>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -18,6 +23,7 @@
             include("includes/sidebar.inc.php");
             include("includes/content_title.inc.php");
             ?>	
+                <div id="calendar"></div>
 				<div id="content">
 				    <form name="main_form" id="main_form">
                         <h4>ФИО</h4>
@@ -82,6 +88,7 @@
                                 <label for="cb_museum">Музеи</label>
                             </div>
                         </div>
+                        <input type="button" class="formButton" name="calendarButton" value="CALENDAR" >
                         <input type="button" class="formButton" name="checkAllButton" value="CHECK ALL" >
                         <input type="button" class="formButton" name="uncheckAllButton" id="uncheckAllButton" value="UNCHECK ALL">
                         <input type="button" class="formButton" name="InvertAll" value="INVERT" >
